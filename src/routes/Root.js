@@ -1,14 +1,10 @@
 import "../index.css"
-import { Link, Outlet } from "react-router-dom"
+import NavBar from "../components/NavBar"
 
 export default function App() {
     return (
         <>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-            </nav>
-            <Outlet />
+            <NavBar />
         </>
     )
 }
