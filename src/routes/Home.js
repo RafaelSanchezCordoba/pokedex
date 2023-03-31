@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PokeCard from '../components/PokeCard'
 import PokeInfo from '../components/PokeInfo'
+import Pagination from '../components/Pagination'
 import './home.css'
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
   const [page, setPage] = useState(1)
   const [isVisible, setIsVisible] = useState(false)
   const [selectedName, setSelectedName] = useState("bulbasaur")
+
+  const totalPages = 65
+    
 
   async function getPokemos(page) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=20&offset=${(page -1) * 20}}`)
@@ -82,8 +86,10 @@ function App() {
         </div>
         
       </div>
-      <button className='load-more' onClick={() => setPage(page + 1)}>Load More</button>
-      <button className='load-more' onClick={() => setPage(page - 1)}>Previous</button>
+      <Pagination
+        page={page}
+        totalPages={totalPages}
+        setPage={setPage} />
     </div>
   )
 }
