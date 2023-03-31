@@ -9,7 +9,7 @@ function App() {
   const [pokemon, setPokemon] = useState({})
   const [page, setPage] = useState(1)
   const [isVisible, setIsVisible] = useState(false)
-  const [selectedName, setSelectedName] = useState("bulbasaur")
+  const [selectedName, setSelectedName] = useState("ditto")
 
   const totalPages = 65
     
@@ -44,6 +44,10 @@ function App() {
     setIsVisible(true)
   }
 
+  function handleChange(event) {
+    setSelectedName(event.target.value)
+  }
+
   function closeInfo() {
     setIsVisible(false)
   }
@@ -51,6 +55,8 @@ function App() {
   return (
     <div className='app-container'> 
       <h1>Pokemons</h1>
+      <input type="text" onChange={handleChange} value={selectedName}/>
+      <button onClick={() => handleClick(selectedName)}>Search</button>
       <div className='pokemon-container'>
         <div>
           {" "}
