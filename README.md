@@ -10,13 +10,13 @@ This is a simple Pokedex app built with React, which allows users to search for 
 
 ## Installation
 
-1. Clone the repository: 'git clone https://github.com/RafaelSanchezCordoba/pokedex'
-2. Navigate to the project directory: 'cd pokedex'
-3. Install dependencies: 'npm install'
+1. Clone the repository: `git clone https://github.com/RafaelSanchezCordoba/pokedex`
+2. Navigate to the project directory: `cd pokedex`
+3. Install dependencies: `npm install`
 
 ## Usage
 
-1. Start the development server: 'npm start'
+1. Start the development server: `npm start`
 2. Open your web browser and navigate to http://localhost:3000
 
 ### Dependencies
